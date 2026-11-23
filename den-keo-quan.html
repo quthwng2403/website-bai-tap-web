@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÈN KÉO QUÂN – BÀI TẬP 24</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lantern-theme">
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="main-title">WEBSITE BÀI TẬP THỰC HÀNH LẬP TRÌNH WEB</h1>
+            <div class="student-info-bar">
+                <span><strong>Họ tên:</strong> Nguyễn Quốc Thắng</span>
+                <span><strong>MSSV:</strong> 231A010001</span>
+                <span><strong>Lớp:</strong> CNTT - ĐH Văn Hiến</span>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="bai17.html">Bài tập 17 – Alert và Prompt</a></li>
+                <li><a href="bai18.html">Bài tập 18 – Tính tổng hai số</a></li>
+                <li><a href="bai19.html">Bài tập 19 – Thay đổi màu nền ngẫu nhiên</a></li>
+                <li><a href="bai20.html">Bài tập 20 – Đồng hồ và Countdown Timer</a></li>
+                <li><a href="bai21.html">Bài tập 21 – Nội dung thực hành</a></li>
+                <li><a href="bai22.html">Bài tập 22 – Nội dung thực hành</a></li>
+                <li><a href="den-keo-quan.html" class="active">Bài tập 24 – Đèn kéo quân</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lantern-section">
+        <h2 class="lantern-heading">ĐÈN KÉO QUÂN – BÀI TẬP 24</h2>
+        <p class="lantern-desc">
+            Trò chơi dân gian đèn kéo quân được mô phỏng bằng hiệu ứng không gian 3 chiều (CSS 3D Transform) với 6 mặt hình ảnh
+            bố trí đều quanh trục trụ. Khi đưa chuột vào một hình ảnh bất kỳ, đèn sẽ dừng quay để bạn quan sát; khi rê chuột ra ngoài, đèn tiếp tục quay.
+        </p>
+
+        <div id="lanternStatus" class="lantern-status">Trạng thái: Đèn đang quay</div>
+
+        <!-- Khu vực hiển thị đèn kéo quân ở giữa màn hình -->
+        <section class="lantern-stage">
+            <div class="light-aura"></div>
+            <div class="lantern-top"></div>
+
+            <div id="lanternDrum" class="lantern-drum">
+                <div class="lantern-panel panel-1">
+                    <img src="images/anh1.svg" alt="Hình ảnh 1 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 1 – Ảnh cá nhân 1</div>
+                </div>
+                <div class="lantern-panel panel-2">
+                    <img src="images/anh2.svg" alt="Hình ảnh 2 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 2 – Ảnh cá nhân 2</div>
+                </div>
+                <div class="lantern-panel panel-3">
+                    <img src="images/anh3.svg" alt="Hình ảnh 3 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 3 – Ảnh cá nhân 3</div>
+                </div>
+                <div class="lantern-panel panel-4">
+                    <img src="images/anh4.svg" alt="Hình ảnh 4 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 4 – Ảnh cá nhân 4</div>
+                </div>
+                <div class="lantern-panel panel-5">
+                    <img src="images/anh5.svg" alt="Hình ảnh 5 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 5 – Ảnh cá nhân 5</div>
+                </div>
+                <div class="lantern-panel panel-6">
+                    <img src="images/anh6.svg" alt="Hình ảnh 6 trên đèn kéo quân">
+                    <div class="panel-label">Mặt 6 – Ảnh cá nhân 6</div>
+                </div>
+            </div>
+
+            <div class="lantern-bottom"></div>
+        </section>
+
+        <!-- Các nút điều khiển -->
+        <div class="lantern-controls">
+            <button id="btnBeginSpin" class="btn-control btn-begin" type="button">Bắt đầu quay</button>
+            <button id="btnHaltSpin" class="btn-control btn-halt" type="button">Dừng quay</button>
+            <button id="btnContinueSpin" class="btn-control btn-continue" type="button">Quay tiếp</button>
+        </div>
+
+        <div class="replace-note">
+            <h3>Hướng dẫn thay 6 hình ảnh mẫu bằng ảnh cá nhân tự chụp:</h3>
+            <p>
+                1. Chép 6 ảnh cá nhân tự chụp của bạn vào thư mục <code>images/</code> và đặt tên lần lượt là:
+                <code>anh1.jpg</code>, <code>anh2.jpg</code>, <code>anh3.jpg</code>, <code>anh4.jpg</code>, <code>anh5.jpg</code>, <code>anh6.jpg</code>.<br>
+                2. Mở file <code>den-keo-quan.html</code> và đổi đuôi <code>.svg</code> thành <code>.jpg</code> ở 6 dòng
+                <code>&lt;img src="images/anh1.jpg" ...&gt;</code> đến <code>&lt;img src="images/anh6.jpg" ...&gt;</code>.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        Sinh viên thực hiện: Nguyễn Quốc Thắng | MSSV: 231A010001 | Lớp: CNTT - ĐH Văn Hiến
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

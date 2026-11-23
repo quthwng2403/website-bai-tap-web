@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #1e3a8a;
+    --primary-hover: #1d4ed8;
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    --bg-light: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Thanh menu chính */
+.main-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 22px 16px 0;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.student-info-bar {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+}
+
+.top-nav {
+    background-color: rgba(15, 23, 42, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 8px;
+}
+
+.nav-list a {
+    display: block;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 13px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.nav-list a:hover {
+    background-color: var(--accent);
+    color: #0f172a;
+    transform: translateY(-2px);
+}
+
+.nav-list a.active {
+    background-color: #ffffff;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Khu vực nội dung chính */
+.main-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 28px auto;
+    padding: 0 16px;
+    flex: 1;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.page-intro h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.page-intro p {
+    color: var(--text-muted);
+}
+
+/* Danh sách bài tập dạng thẻ trên trang chủ */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(30, 58, 138, 0.12);
+}
+
+.task-card.featured {
+    border: 2px solid var(--accent);
+    background: linear-gradient(180deg, #fffbeb 0%, #ffffff 42%);
+}
+
+.task-tag {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.task-card.featured .task-tag {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.task-card h3 {
+    font-size: 1.12rem;
+    margin-bottom: 8px;
+}
+
+.task-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+/* Nút bấm chung */
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--primary-hover);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(29, 78, 216, 0.25);
+}
+
+.btn-gold {
+    background-color: var(--accent);
+    color: #0f172a;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-hover);
+    color: #ffffff;
+}
+
+/* Khung thực hành cho các bài 17 - 22 */
+.work-box {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.work-box h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.input-row {
+    margin: 14px 0;
+}
+
+.input-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.input-row input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.output-panel {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background-color: #f8fafc;
+    border-left: 4px solid var(--primary-hover);
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* ================= TRANG ĐÈN KÉO QUÂN 3D (BÀI 24) ================= */
+body.lantern-theme {
+    background: radial-gradient(circle at top, #1e1b4b 0%, #090d16 75%);
+    color: #f8fafc;
+}
+
+.lantern-section {
+    max-width: 1100px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 16px;
+    text-align: center;
+    flex: 1;
+}
+
+.lantern-heading {
+    font-size: 2rem;
+    color: #fbbf24;
+    text-shadow: 0 0 18px rgba(251, 191, 36, 0.6);
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+}
+
+.lantern-desc {
+    max-width: 740px;
+    margin: 0 auto 14px;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+}
+
+.lantern-status {
+    display: inline-block;
+    background: rgba(251, 191, 36, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.45);
+    color: #fde68a;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Khung sân khấu 3D tạo chiều sâu perspective */
+.lantern-stage {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1100px;
+    margin: 8px 0 26px;
+    overflow: hidden;
+}
+
+/* Hiệu ứng ánh sáng lồng đèn */
+.light-aura {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.42) 0%, rgba(249, 115, 22, 0.14) 50%, transparent 72%);
+    filter: blur(12px);
+    pointer-events: none;
+    animation: auraGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes auraGlow {
+    from { transform: scale(0.95); opacity: 0.82; }
+    to { transform: scale(1.08); opacity: 1; }
+}
+
+.lantern-top,
+.lantern-bottom {
+    width: 245px;
+    height: 22px;
+    background: linear-gradient(90deg, #7c2d12, #f59e0b, #7c2d12);
+    border: 2px solid #fde68a;
+    border-radius: 50%;
+    box-shadow: 0 0 22px rgba(245, 158, 11, 0.65);
+    z-index: 2;
+}
+
+.lantern-top { margin-bottom: 14px; }
+.lantern-bottom { margin-top: 14px; }
+
+/* Trục xoay 3D giữ không gian 3 chiều preserve-3d */
+.lantern-drum {
+    position: relative;
+    width: 210px;
+    height: 260px;
+    transform-style: preserve-3d;
+    animation: rotateLantern 15s linear infinite;
+    animation-play-state: running;
+}
+
+/* Khi rê chuột vào bất kỳ mặt hình ảnh nào, đèn dừng quay */
+.lantern-drum:has(.lantern-panel:hover) {
+    animation-play-state: paused;
+}
+
+/* Lớp điều khiển dừng bằng nút bấm JavaScript */
+.lantern-drum.paused-by-btn {
+    animation-play-state: paused !important;
+}
+
+@keyframes rotateLantern {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Bố trí đều 6 mặt xung quanh hình trụ (360 / 6 = 60 độ) */
+.lantern-panel {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #fbbf24;
+    background-color: #1e293b;
+    box-shadow: 0 0 22px rgba(251, 191, 36, 0.45), inset 0 0 16px rgba(251, 191, 36, 0.25);
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lantern-panel:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 32px rgba(255, 255, 255, 0.9);
+}
+
+.lantern-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.panel-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+    color: #fef3c7;
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 18px 8px 8px;
+}
+
+.panel-1 { transform: rotateY(0deg) translateZ(220px); }
+.panel-2 { transform: rotateY(60deg) translateZ(220px); }
+.panel-3 { transform: rotateY(120deg) translateZ(220px); }
+.panel-4 { transform: rotateY(180deg) translateZ(220px); }
+.panel-5 { transform: rotateY(240deg) translateZ(220px); }
+.panel-6 { transform: rotateY(300deg) translateZ(220px); }
+
+/* Cụm 3 nút điều khiển */
+.lantern-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.btn-control {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-begin {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+}
+
+.btn-begin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.45);
+}
+
+.btn-halt {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+}
+
+.btn-halt:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.45);
+}
+
+.btn-continue {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #0f172a;
+}
+
+.btn-continue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.45);
+}
+
+.replace-note {
+    max-width: 760px;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.replace-note h3 {
+    color: #fbbf24;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.replace-note code {
+    background: rgba(15, 23, 42, 0.85);
+    color: #38bdf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Footer thông tin sinh viên */
+.site-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.92rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+/* Responsive trên điện thoại & máy tính bảng */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.28rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-list a {
+        text-align: center;
+    }
+
+    .lantern-heading {
+        font-size: 1.5rem;
+    }
+
+    .lantern-stage {
+        height: 340px;
+        perspective: 820px;
+    }
+
+    .lantern-drum {
+        width: 156px;
+        height: 205px;
+    }
+
+    .panel-1 { transform: rotateY(0deg) translateZ(160px); }
+    .panel-2 { transform: rotateY(60deg) translateZ(160px); }
+    .panel-3 { transform: rotateY(120deg) translateZ(160px); }
+    .panel-4 { transform: rotateY(180deg) translateZ(160px); }
+    .panel-5 { transform: rotateY(240deg) translateZ(160px); }
+    .panel-6 { transform: rotateY(300deg) translateZ(160px); }
+}
